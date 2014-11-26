@@ -1,0 +1,13 @@
+[user]
+	name = Daan Schulpen
+	email = daan.schulpen@intraffic.nl
+[color]
+	ui = always
+[alias]
+	his = log --oneline --decorate --all --graph
+[push]
+	default = simple
+[credential]
+	helper = /home/schuld/usr/bin/git-credential-gnome-keyring
+[difftool "norovimdiff"]
+	cmd = vim -f -d -c \"wincmd l\" -c 'cd \"$GIT_PREFIX\"' \"$LOCAL\" \"$REMOTE\"
