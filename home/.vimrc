@@ -9,7 +9,7 @@ set autoindent
 set nostartofline
 set confirm
 set visualbell
-set shiftwidth=2 tabstop=2 softtabstop=2 expandtab
+set shiftwidth=4 tabstop=4 softtabstop=4 expandtab
 set ignorecase smartcase hlsearch
 set number
 set laststatus=2
@@ -31,6 +31,10 @@ nnoremap <PageUp> <C-U><C-U>
 nnoremap <PageDown> <C-D><C-D>
 nnoremap <F3> /<CR>
 nnoremap <S-F3> ?<CR>
+nnoremap <F9> i<C-R>%<ESC>F/lc^#ifndef <ESC>lgUWwr_<ESC>yyplcwdefine<ESC>A<CR><CR><CR><CR>#endif<ESC>kk
+nnoremap <F7> :TlistOpen<CR>
+nnoremap <F8> :wa<CR>:!ctags --options=tags.opt<CR>
+"PASCAL
 "Let vim recognise VMS pascal 
 au BufNewFile,BufRead *.PAS set filetype=pascal
 au BufNewFile,BufRead *.INC set filetype=pascal
@@ -43,6 +47,9 @@ au FileType pascal set shiftwidth=2 tabstop=2 softtabstop=2
 "For (VMS) pascal: case-insensitive diff
 au FileType pascal set diffopt+=icase
 "au FileType pascal set foldmethod=indent foldnestmax=1 foldcolumn=1
+"CPP
+"Add angle brackets to matchpairs
+au FileType cpp set matchpairs+=<:>
 "Open tag in new vertical split
 au FileType * nnoremap <buffer> <cr> 
     \ :vert belowright split <cr> <c-]>
