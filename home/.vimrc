@@ -22,7 +22,7 @@ set t_ut=
 let g:localvimrc_sandbox = 0
 let g:localvimrc_ask = 0
 let g:netrw_ftpmode = 'ascii'
-let g:solarized_termcolors=256
+"let g:solarized_termcolors=256
 "colorscheme twilight
 colorscheme solarized
 "
