@@ -1,0 +1,5 @@
+vim-nox git tmux 
+homeshick dotfiles
+build-essential clang-3.5 subversion mercurial
+build-dep vim-nox git clang-3.5
+src git vim clang
