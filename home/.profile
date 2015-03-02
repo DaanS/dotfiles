@@ -16,10 +16,23 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
+# add $1 to $PATH if $1 exists and is not already in $PATH
+pathadd() {
+    if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
+        PATH="${PATH:+"$PATH:"}$1"
+    fi
+}
+
 # set PATH so it includes user's private bin if it exists
+# unlike the sbin stuff, we want at the front of PATH
 if [ -d "$HOME/usr/bin" ] ; then
     PATH="$HOME/usr/bin:$PATH"
 fi
+
+# Safely add bin-dirs
+pathadd /sbin
+pathadd /usr/sbin
+pathadd /usr/local/sbin
 
 export TERM=xterm-256color
 export EDITOR=vim
