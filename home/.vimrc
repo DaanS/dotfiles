@@ -22,6 +22,13 @@ set t_ut=
 let g:localvimrc_sandbox = 0
 let g:localvimrc_ask = 0
 let g:netrw_ftpmode = 'ascii'
+"clang_complete
+set completefunc=ClangComplete
+let g:clang_library_path = '/usr/lib/llvm-3.5/lib/libclang.so.1'
+let g:clang_user_options = '-std=c++11'
+let g:clang_auto_select = 1
+let g:clang_close_preview = 1
+set splitbelow
 "let g:solarized_termcolors=256
 "colorscheme twilight
 colorscheme solarized
