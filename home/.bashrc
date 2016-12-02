@@ -117,3 +117,7 @@ fi
 
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 source "$HOME/.homesick/repos/homeshick/completions/homeshick-completion.bash"
+
+if [[ $- != *i* ]] && which tmux >/dev/null 2>&1; then
+    test -z "$TMUX" && (tmux attach || tmux new-session)
+fi
