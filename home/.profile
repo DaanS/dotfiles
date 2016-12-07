@@ -24,7 +24,7 @@ pathadd() {
 }
 
 # set PATH so it includes user's private bin if it exists
-# unlike the sbin stuff, we want at the front of PATH
+# unlike the sbin stuff, we want this at the front of PATH
 if [ -d "$HOME/usr/bin" ] ; then
     PATH="$HOME/usr/bin:$PATH"
 fi
