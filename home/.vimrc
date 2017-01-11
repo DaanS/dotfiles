@@ -68,3 +68,13 @@ au FileType * nnoremap <buffer> <space>
 au BufNewFile,BufRead *.tjp,*.tji set filetype=tjp
 au FileType tjp nnoremap <F10> :w<CR>:make %<CR>
 au! Syntax tjp so ~/.vim/syntax/tjp.vim
+"Remove trailing whitespace
+fun! <SID>StripTrailingWhitespaces()
+    let l = line(".")
+    let c = col(".")
+    let _s = @/
+    keepp %s/\s\+$//e
+    let @/ = _s
+    call cursor(l, c)
+endfun
+autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
