@@ -7,7 +7,7 @@
 [push]
 	default = simple
 [credential]
-	helper = /home/schuld/usr/bin/git-credential-gnome-keyring
+	helper = /usr/share/doc/git/contrib/credential/gnome-keyring/git-credential-gnome-keyring
 [difftool "norovimdiff"]
 	cmd = vim -f -d -c \"wincmd l\" -c 'cd \"$GIT_PREFIX\"' \"$LOCAL\" \"$REMOTE\"
 [include]
