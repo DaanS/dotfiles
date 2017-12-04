@@ -28,6 +28,9 @@ pathadd() {
 if [ -d "$HOME/usr/bin" ] ; then
     PATH="$HOME/usr/bin:$PATH"
 fi
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
 
 # Safely add bin-dirs
 pathadd /sbin
