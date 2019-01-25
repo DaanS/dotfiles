@@ -9,6 +9,7 @@ fi
 # export SYSTEMD_PAGER=
 
 # User specific aliases and functions
+alias vim=nvim
 
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 source "$HOME/.homesick/repos/homeshick/completions/homeshick-completion.bash"
