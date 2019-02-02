@@ -40,6 +40,7 @@ else
     Plug 'roxma/nvim-yarp'
     Plug 'roxma/vim-hug-neovim-rpc'
 endif
+Plug 'mattn/emmet-vim'
 call plug#end()
 
 set termguicolors
@@ -89,9 +90,13 @@ nnoremap <S-F3> ?<CR>
 nnoremap <F9> i<C-R>%<ESC>F/lc^#ifndef <ESC>lgUWwr_<ESC>yyplcwdefine<ESC>A<CR><CR><CR><CR>#endif<ESC>kk
 nnoremap <F7> :TlistOpen<CR>
 nnoremap <F8> :wa<CR>:!ctags --options=tags.opt<CR>
+nnoremap <Leader>[ :bp<CR>
+nnoremap <Leader>] :bn<CR>
 
 "JS
 au FileType javascript set shiftwidth=2 tabstop=2 softtabstop=2
+au FileType html set shiftwidth=2 tabstop=2 softtabstop=2
+au FileType css set shiftwidth=2 tabstop=2 softtabstop=2
 
 "PASCAL
 "Let vim recognise VMS pascal
