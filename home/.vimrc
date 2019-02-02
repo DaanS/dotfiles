@@ -23,6 +23,12 @@ if !has('nvim')
 endif
 set mouse=a
 
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 "vim-plug
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'https://github.com/ctrlpvim/ctrlp.vim'
@@ -64,8 +70,8 @@ endif
 inoremap <expr> <Tab> pumvisible() ? "\<Down>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<Up>" : "\<S-Tab>"
 
-let g:airline_theme='solarized'
-let g:airline_solarized_bg='light'
+let g:airline_theme = 'solarized'
+let g:airline_solarized_bg = &background
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 

@@ -1,5 +1,6 @@
 #!/bin/bash
-sudo yum install python36
+sudo yum install -y epel-release
+sudo yum install -y neovim python36
 sudo python36 -m ensurepip
 sudo python36 -m pip install --upgrade pip
 sudo python36 -m pip install neovim
