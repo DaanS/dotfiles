@@ -46,7 +46,7 @@ else
     Plug 'roxma/nvim-yarp'
     Plug 'roxma/vim-hug-neovim-rpc'
 endif
-Plug 'mattn/emmet-vim'
+Plug 'daans/emmet-vim'
 Plug 'posva/vim-vue'
 Plug 'jparise/vim-graphql'
 call plug#end()
