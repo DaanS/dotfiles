@@ -34,11 +34,11 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'https://github.com/ctrlpvim/ctrlp.vim'
 Plug 'https://github.com/embear/vim-localvimrc'
 Plug 'https://github.com/adelarsq/vim-matchit'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'iCyMind/NeoSolarized'
 Plug 'w0rp/ale'
 Plug 'pangloss/vim-javascript'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 if has('nvim')
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
@@ -47,15 +47,18 @@ else
     Plug 'roxma/vim-hug-neovim-rpc'
 endif
 Plug 'mattn/emmet-vim'
+Plug 'posva/vim-vue'
+Plug 'jparise/vim-graphql'
 call plug#end()
 
 set termguicolors
 colorscheme NeoSolarized
 
-let g:ale_fixers = { 'javascript': ['eslint'] }
+let g:ale_fixers = { 'javascript': ['eslint'], 'html': ['prettier'], 'vue': ['prettier'] }
 let g:ale_sign_column_always = 1
 let g:ale_sign_error = '✖'
 let g_ale_sign_warning = '>'
+let g:ale_linter_aliases = { 'html': ['html', 'javascript'], 'vue': ['vue', 'javascript'] }
 
 let g:python3_host_prog = "/usr/bin/python3.6"
 let g:deoplete#enable_at_startup = 1
@@ -88,6 +91,8 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standar
 let g:ctrlp_cmd = 'CtrlPBuffer'
 let g:ctrlp_mruf_exclude = 'build/.*'
 
+let g:user_emmet_leader_key = ','
+
 nnoremap <C-L> :nohl<CR>
 nnoremap <PageUp> <C-U><C-U>
 nnoremap <PageDown> <C-D><C-D>
@@ -103,6 +108,8 @@ nnoremap <Leader>] :bn<CR>
 au FileType javascript set shiftwidth=2 tabstop=2 softtabstop=2
 au FileType html set shiftwidth=2 tabstop=2 softtabstop=2
 au FileType css set shiftwidth=2 tabstop=2 softtabstop=2
+
+au FileType yaml set shiftwidth=2 tabstop=2 softtabstop=2
 
 "PASCAL
 "Let vim recognise VMS pascal
