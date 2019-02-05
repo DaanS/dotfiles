@@ -2,12 +2,9 @@ module.exports = {
     'extends': [
         'eslint:recommended',
         'prettier',
-        'plugin:vue/recommended
     ],
     'plugins': [
         'prettier',
-        'html',
-        'vue'
     ],
     'rules': {
         'prettier/prettier': 'error',
