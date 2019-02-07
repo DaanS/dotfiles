@@ -108,6 +108,7 @@ nnoremap <Leader>] :bn<CR>
 au FileType javascript set shiftwidth=2 tabstop=2 softtabstop=2
 au FileType html set shiftwidth=2 tabstop=2 softtabstop=2
 au FileType css set shiftwidth=2 tabstop=2 softtabstop=2
+au FileType vue set shiftwidth=2 tabstop=2 softtabstop=2
 
 au FileType yaml set shiftwidth=2 tabstop=2 softtabstop=2
 
