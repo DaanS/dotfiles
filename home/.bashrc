@@ -10,6 +10,7 @@ fi
 
 # User specific aliases and functions
 alias vim=nvim
+alias ls='ls --color=auto'
 
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 source "$HOME/.homesick/repos/homeshick/completions/homeshick-completion.bash"

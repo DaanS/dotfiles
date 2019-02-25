@@ -1,13 +1,14 @@
 #!/bin/bash
-sudo yum install -y epel-release
-sudo yum install -y neovim python36
-sudo python36 -m ensurepip
-sudo python36 -m pip install --upgrade pip
-sudo python36 -m pip install neovim
-mkdir -p $HOME/projects/other
-cd $HOME/projects/other
-git clone http://github.com/powerline/fonts.git --depth=1
-cd fonts
-./install.sh
-cd ..
-rm -rf fonts
+sudo add-apt-repository -y ppa:neovim-ppa/stable
+sudo aptitude install -y neovim python3.7 python3-pip curl fonts-powerline
+sudo pip3 install --upgrade pip
+sudo pip3 install neovim
+#mkdir -p $HOME/projects/other
+#cd $HOME/projects/other
+#git clone http://github.com/powerline/fonts.git --depth=1
+#cd fonts
+#./install.sh
+#cd ..
+#rm -rf fonts
+mkdir -p $HOME/.config/nvim
+echo 'source ~/.vimrc' >> $HOME/.config/nvim/init.vim
