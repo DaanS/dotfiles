@@ -51,7 +51,9 @@ Plug 'posva/vim-vue'
 Plug 'jparise/vim-graphql'
 call plug#end()
 
-set termguicolors
+if has('nvim')
+    set termguicolors
+endif
 colorscheme NeoSolarized
 
 let g:ale_fixers = { 'javascript': ['eslint'], 'html': ['prettier'], 'vue': ['prettier'] }
