@@ -37,8 +37,7 @@ pathadd /sbin
 pathadd /usr/sbin
 pathadd /usr/local/sbin
 
-export TERM=xterm-256color
-export EDITOR=vim
+export EDITOR=nvim
 
 source $HOME/dotfiles/bash_completion_tmux.sh
 

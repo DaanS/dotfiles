@@ -7,7 +7,7 @@
 [push]
 	default = simple
 [credential]
-    helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
+	helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
 [difftool "norovimdiff"]
 	cmd = vim -f -d -c \"wincmd l\" -c 'cd \"$GIT_PREFIX\"' \"$LOCAL\" \"$REMOTE\"
 [include]
