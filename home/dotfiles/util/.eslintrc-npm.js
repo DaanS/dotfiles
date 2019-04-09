@@ -11,7 +11,8 @@ module.exports = {
         'no-console': 'off'
     },
     'env': {
-        'node': true
+        'node': true,
+        'es6': true
     },
     'parserOptions': {
         'ecmaVersion': 10,
