@@ -11,4 +11,4 @@ sudo pip3 install neovim
 #cd ..
 #rm -rf fonts
 mkdir -p $HOME/.config/nvim
-echo 'source ~/.vimrc' >> $HOME/.config/nvim/init.vim
+grep -qxF 'source ~/.vimrc' $HOME/.config/nvim/init.vim || echo 'source ~/.vimrc' >> $HOME/.config/nvim/init.vim
