@@ -17,7 +17,7 @@ set laststatus=2
 set diffopt+=iwhite
 set statusline=%f\ %h%m%r%=%c,\ %l/%L\ "
 set t_Co=256
-set background=light
+set background=dark
 if !has('nvim')
     set ttymouse=xterm2
 endif
@@ -49,6 +49,7 @@ endif
 Plug 'daans/emmet-vim'
 Plug 'posva/vim-vue'
 Plug 'jparise/vim-graphql'
+Plug 'tikhomirov/vim-glsl'
 call plug#end()
 
 if has('nvim')
@@ -93,6 +94,7 @@ let g:netrw_sort_sequence = '[\/]$,\<core\%(\.\d\+\)\=,\.[a-np-z]$,\.h$\|\.c$\|\
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 let g:ctrlp_cmd = 'CtrlPBuffer'
 let g:ctrlp_mruf_exclude = 'build/.*'
+let g:ctrlp_mruf_relative = 1
 
 let g:user_emmet_leader_key = ','
 
