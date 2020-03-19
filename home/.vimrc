@@ -39,21 +39,21 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'iCyMind/NeoSolarized'
 Plug 'w0rp/ale'
 Plug 'pangloss/vim-javascript'
-if has('nvim')
-    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-    Plug 'Shougo/deoplete.vim'
-    Plug 'roxma/nvim-yarp'
-    Plug 'roxma/vim-hug-neovim-rpc'
-endif
+"if has('nvim')
+"    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"else
+"    Plug 'Shougo/deoplete.vim'
+"    Plug 'roxma/nvim-yarp'
+"    Plug 'roxma/vim-hug-neovim-rpc'
+"endif
 Plug 'daans/emmet-vim'
 Plug 'posva/vim-vue'
 Plug 'jparise/vim-graphql'
 call plug#end()
 
-if has('nvim')
-    set termguicolors
-endif
+"if has('nvim')
+"    set termguicolors
+"endif
 colorscheme NeoSolarized
 
 let g:ale_fixers = { 'javascript': ['eslint'], 'html': ['prettier'], 'vue': ['prettier'] }
@@ -62,18 +62,18 @@ let g:ale_sign_error = '✖'
 let g_ale_sign_warning = '>'
 let g:ale_linter_aliases = { 'html': ['html', 'javascript'], 'vue': ['vue', 'javascript'] }
 
-let g:python3_host_prog = "/usr/bin/python3.6"
-let g:deoplete#enable_at_startup = 1
-let local_flow = finddir('node_modules', '.;') . '/.bin/flow'
-if matchstr(local_flow, "^\/\\w") == ''
-    let local_flow = getcwd() . "/" . local_flow
-endif
-if executable(local_flow)
-    let g:flow#flowpath = local_flow
-    let g:deoplete#sources#flow#flow_bin = local_flow
-endif
-inoremap <expr> <Tab> pumvisible() ? "\<Down>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<Up>" : "\<S-Tab>"
+let g:python3_host_prog = "/opt/rh/rh-python34/root/usr/bin/python3"
+"let g:deoplete#enable_at_startup = 1
+"let local_flow = finddir('node_modules', '.;') . '/.bin/flow'
+"if matchstr(local_flow, "^\/\\w") == ''
+"    let local_flow = getcwd() . "/" . local_flow
+"endif
+"if executable(local_flow)
+"    let g:flow#flowpath = local_flow
+"    let g:deoplete#sources#flow#flow_bin = local_flow
+"endif
+"inoremap <expr> <Tab> pumvisible() ? "\<Down>" : "\<Tab>"
+"inoremap <expr> <S-Tab> pumvisible() ? "\<Up>" : "\<S-Tab>"
 
 let g:airline_theme = 'solarized'
 let g:airline_solarized_bg = &background

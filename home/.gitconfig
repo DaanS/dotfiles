@@ -4,6 +4,7 @@
 	ui = always
 [alias]
 	his = log --oneline --decorate --all --graph
+	his-one = log --oneline --decorate --graph
 [push]
 	default = simple
 [credential]
