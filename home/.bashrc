@@ -49,7 +49,8 @@ alias qdstat='python2 /bin/qdstat'
 alias qdmanage='python2 /bin/qdmanage'
 # END PRL Aliasses
 # BEGIN PRL Aliases
-alias qdstat='python2 /bin/qdstat'
-alias qdmanage='python2 /bin/qdmanage'
+source /opt/qpid-itr/enable
+alias qdstat='python2 /opt/qpid-itr/bin/qdstat'
+alias qdmanage='python2 /opt/qpid-itr/bin/qdmanage'
 # END PRL Aliases
 source /opt/qpid-itr/enable
