@@ -40,5 +40,3 @@ pathadd /usr/local/sbin
 export EDITOR=nvim
 
 source $HOME/dotfiles/bash_completion_tmux.sh
-
-eval `dircolors $HOME/dotfiles/.dircolors`

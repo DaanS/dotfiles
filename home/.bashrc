@@ -12,6 +12,10 @@ fi
 alias vim=nvim
 alias ls='ls --color=auto'
 
+export GIT_ASKPASS='/usr/bin/ksshaskpass'
+
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 source "$HOME/.homesick/repos/homeshick/completions/homeshick-completion.bash"
 export PS1='\[\033[32m\]\u@\h\[\033[00m\]:\[\033[34m\]\w\[\033[00m\]\$ '
+
+eval `dircolors $HOME/dotfiles/.dircolors`
