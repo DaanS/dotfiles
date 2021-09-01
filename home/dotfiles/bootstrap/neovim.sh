@@ -1,6 +1,6 @@
 #!/bin/bash
 sudo add-apt-repository -y ppa:neovim-ppa/stable
-sudo aptitude install -y neovim python3.7 python3-pip curl fonts-powerline
+sudo aptitude install -y neovim python3-dev python3-pip curl fonts-powerline
 sudo pip3 install --upgrade pip
 sudo pip3 install neovim
 #mkdir -p $HOME/projects/other

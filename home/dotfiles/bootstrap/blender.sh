@@ -7,7 +7,7 @@ cd ${root_dir}
 
 git clone https://git.blender.org/blender.git
 cd blender
-git checkout v2.82
+git checkout v2.93.3
 git submodule init
 git submodule update
 cd -
