@@ -12,7 +12,7 @@ fi
 source scl_source enable devtoolset-7
 export X_SCLS="`scl enable devtoolset-7 'echo $X_SCLS'`"
 source scl_source enable rh-git29
-source scl_source enable rh-python34
+source scl_source enable rh-python36
 
 alias vim=nvim
 
@@ -50,7 +50,9 @@ alias qdmanage='python2 /bin/qdmanage'
 # END PRL Aliasses
 # BEGIN PRL Aliases
 source /opt/qpid-itr/enable
+source /opt/prl/scripts/prl_oracle_env.sh
 alias qdstat='python2 /opt/qpid-itr/bin/qdstat'
 alias qdmanage='python2 /opt/qpid-itr/bin/qdmanage'
 # END PRL Aliases
 source /opt/qpid-itr/enable
+source /opt/prl/scripts/vptprl_app_config.sh

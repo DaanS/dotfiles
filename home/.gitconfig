@@ -15,3 +15,9 @@
 	path = ~/.gitconfig-local
 [core]
 	excludesfile = ~/.gitignore-global
+[http]
+    sslBackend = openssl
+    sslVerify = false
+    sslCAInfo = /home/prl/cert-ict/cacrt.crt
+    sslCert = /home/prl/cert-ict/John_Doe.crt
+    sslKey = /home/prl/cert-ict/John_Doe.key
