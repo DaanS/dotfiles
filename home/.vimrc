@@ -17,7 +17,7 @@ set laststatus=2
 set diffopt+=iwhite
 set statusline=%f\ %h%m%r%=%c,\ %l/%L\ "
 set t_Co=256
-set background=dark
+set background=light
 if !has('nvim')
     set ttymouse=xterm2
 endif
@@ -64,7 +64,7 @@ let g_ale_sign_warning = '>'
 let g:ale_linter_aliases = { 'html': ['html', 'javascript'], 'vue': ['vue', 'javascript'] }
 nnoremap <Leader>l :ALEFix<CR>:syntax sync fromstart<CR>
 
-let g:python3_host_prog = "/usr/bin/python3.7"
+"let g:python3_host_prog = "/usr/bin/python3.7"
 let g:deoplete#enable_at_startup = 1
 let local_flow = finddir('node_modules', '.;') . '/.bin/flow'
 if matchstr(local_flow, "^\/\\w") == ''
