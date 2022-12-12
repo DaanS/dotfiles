@@ -36,7 +36,9 @@ fi
 pathadd /sbin
 pathadd /usr/sbin
 pathadd /usr/local/sbin
+pathadd /home/schuld/.local/bin/codesonar-4.4p0/codesonar/bin
 
 export EDITOR=nvim
 
 source $HOME/dotfiles/bash_completion_tmux.sh
+. "$HOME/.cargo/env"
