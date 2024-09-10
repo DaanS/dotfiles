@@ -40,3 +40,4 @@ pathadd /usr/local/sbin
 export EDITOR=nvim
 
 source $HOME/dotfiles/bash_completion_tmux.sh
+. "$HOME/.cargo/env"
