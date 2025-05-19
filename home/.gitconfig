@@ -8,7 +8,7 @@
 [push]
 	default = simple
 [credential]
-	helper = /usr/libexec/git-core/git-credential-gnome-keyring
+	helper = /usr/libexec/git-core/git-credential-libsecret
 [difftool "norovimdiff"]
 	cmd = vim -f -d -c \"wincmd l\" -c 'cd \"$GIT_PREFIX\"' \"$LOCAL\" \"$REMOTE\"
 [include]

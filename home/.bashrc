@@ -31,3 +31,6 @@ export EDITOR=nvim
 source $HOME/dotfiles/bash_completion_tmux.sh
 
 eval `dircolors $HOME/dotfiles/.dircolors`
+source /opt/prl/scripts/vptprl_app_config.sh
+
+pllog () { cat "$(ls -1drt /var/log/prl/*$@_2* | tail -n1)"; }
